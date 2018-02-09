@@ -26,10 +26,9 @@ let TasksService = class TasksService {
     constructor(repository) {
         this.repository = repository;
     }
-    delete(task) {
+    delete(id) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(task);
-            return yield this.repository.delete(task);
+            return yield this.repository.delete({ id });
         });
     }
     findOneByProjectIdAndId(projectId, id) {

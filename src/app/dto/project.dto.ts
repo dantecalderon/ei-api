@@ -5,7 +5,7 @@ import {IsString, Length} from 'class-validator';
 export class ProjectDto {
 
     @IsString()
-    @Length(2, 30)
+    @Length(1, 30)
     @Expose()
     readonly name: string;
 }

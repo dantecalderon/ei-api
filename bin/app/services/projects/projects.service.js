@@ -26,6 +26,11 @@ let ProjectsService = class ProjectsService {
     constructor(repository) {
         this.repository = repository;
     }
+    delete(project) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield this.repository.delete(project);
+        });
+    }
     findOneByUserIdAndId(userId, id) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield this.repository.findOne({ where: { id, userId } });

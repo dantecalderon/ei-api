@@ -15,7 +15,7 @@ let ProjectDto = class ProjectDto {
 };
 __decorate([
     class_validator_1.IsString(),
-    class_validator_1.Length(2, 30),
+    class_validator_1.Length(1, 30),
     class_transformer_1.Expose(),
     __metadata("design:type", String)
 ], ProjectDto.prototype, "name", void 0);

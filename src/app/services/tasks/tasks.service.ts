@@ -7,8 +7,8 @@ import {Task} from '../../entity/task.entity';
 export class TasksService {
     constructor(@Inject('TaskRepositoryToken') private readonly repository: Repository<Task>) {}
 
-    public async delete(task: Task): Promise<void> {
-        return await this.repository.delete(task);
+    public async delete(id: string): Promise<void> {
+        return await this.repository.delete({id});
     }
 
     public async findOneByProjectIdAndId(projectId: string, id: string): Promise<Task> {

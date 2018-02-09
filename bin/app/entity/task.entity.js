@@ -21,6 +21,9 @@ const typeorm_1 = require("typeorm");
 const Entity_1 = require("typeorm/decorator/entity/Entity");
 const project_entity_1 = require("./project.entity");
 let Task = class Task {
+    constructor() {
+        this.status = 'open';
+    }
     beforeInsert() {
         return __awaiter(this, void 0, void 0, function* () {
             this.creationDate = new Date();
@@ -60,7 +63,7 @@ __decorate([
     __metadata("design:type", String)
 ], Task.prototype, "status", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => project_entity_1.Project),
+    typeorm_1.ManyToOne(type => project_entity_1.Project, { onDelete: 'CASCADE' }),
     __metadata("design:type", project_entity_1.Project)
 ], Task.prototype, "project", void 0);
 __decorate([

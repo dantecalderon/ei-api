@@ -28,7 +28,7 @@ export class TasksController {
 
     @Delete(':task')
     async delete(@RequestObjectDecorator('task') task: Task): Promise<null> {
-        await this.tasksService.delete(task);
+        await this.tasksService.delete(task.id);
         return;
     }
 }

@@ -3,7 +3,7 @@ import {IsOptional, IsString, Length} from 'class-validator';
 export class TaskDto {
 
     @IsString()
-    @Length(2, 100)
+    @Length(1, 100)
     readonly description: string;
 
     @IsOptional()

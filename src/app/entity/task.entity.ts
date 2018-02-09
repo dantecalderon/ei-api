@@ -25,9 +25,9 @@ export class Task {
         enum: ['done', 'open'],
         default: 'open',
     })
-    status: string;
+    status: string = 'open';
 
-    @ManyToOne(type => Project)
+    @ManyToOne(type => Project, {onDelete: 'CASCADE'})
     project: Project;
 
     @BeforeInsert()

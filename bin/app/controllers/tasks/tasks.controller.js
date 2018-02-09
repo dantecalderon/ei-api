@@ -47,7 +47,7 @@ let TasksController = class TasksController {
     }
     delete(task) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield this.tasksService.delete(task);
+            yield this.tasksService.delete(task.id);
             return;
         });
     }

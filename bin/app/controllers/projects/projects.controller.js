@@ -81,7 +81,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ProjectsController.prototype, "patch", null);
 __decorate([
-    common_1.Delete(':task'),
+    common_1.Delete(':project'),
     __param(0, request_object_decorator_1.RequestObjectDecorator('project')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [project_entity_1.Project]),

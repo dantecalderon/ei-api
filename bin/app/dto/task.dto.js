@@ -14,7 +14,7 @@ class TaskDto {
 }
 __decorate([
     class_validator_1.IsString(),
-    class_validator_1.Length(2, 100),
+    class_validator_1.Length(1, 100),
     __metadata("design:type", String)
 ], TaskDto.prototype, "description", void 0);
 __decorate([
